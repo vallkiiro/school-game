@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style type="text/css">
+	.pa{
+		position: absolute;
+	}
+	.transition{
+		transition: 1s;
+	}
+	.monospace {
+	  font-family: "Lucida Console", Courier, monospace;
+	}
+	.winner {
+		position: absolute;
+		left: 600px;
+		width: 400px;
+		height: 600px;
+		background-size: 100% 100%;
+		top: 30px;
+	}
+		/*location1*/
+	.sms{
+		width: 300px;
+		height: 150px;
+		background-image: url(talk.png);
+		background-size: 100% 100%;
+		position: absolute;
+		left: 800px;
+		top: 10px;
+		display: none;
+	}
+	.teacher{
+		width: 300px;
+		position: absolute;
+		left: 100px;
+		top:100px;
+	}
+	.playerLoc1{
+		width: 400px;
+		position: absolute;
+		left: 800px;
+		top:140px;
+	}
+	.daniel{
+		width: 300px;
+		position: absolute;
+		left: 400px;
+		top:100px;
+		
+	}
+	.danielSpeak{
+		width: 200px;
+		display: none;
+		height: 150px;
+		background-image: url(talk2.png);
+		background-size: 100% 100%;
+		position: absolute;
+		left: 300px;
+		top: 10px;
+	}
+	.variant{
+		width: 350px;
+		display: none;
+		height: 200px;
+		background-image: url(cloud.png);
+		background-size: 100% 100%;
+		position: absolute;
+		left: 1100px;
+		top: 100px;
+	}
+	.translate{
+		display: none;
+		width: 200px;		
+		height: 150px;
+		background-image: url(talk2.png);
+		background-size: 100% 100%;
+		position: absolute;
+		left: 800px;
+		top: 50px;
+	}
+
+	/*location2*/
+	.sportsmen{
+		height: 120px;
+		position: absolute;
+		left: 20px;
+		background-size: 100% 100%;
+		transition: 1s;
+	}
+
+	
+	</style>
+</head>
+<body class="body transition monospace" style="background-image:url(bg.jpg); background-size: cover;" >
+	
+	<button class="mainButton btn-success btn col-3" style="left: 600px; margin-top: 300px">ИГРАТЬ</button>
+	<div class="main" style="display: none">
+		<div class="english pa" style="width: 400px; height: 400px;left: 500px;top: 200px; background-image: url(door.png); background-size: 100% 100%;">
+			<p style="margin-left: 155px; margin-top: 20px;">Classroom</p>
+		</div>
+		<div class="pe pa" style="width: 400px; height: 400px; left: 800px;top: 200px; background-image: url(door.png); background-size: 100% 100%; ">
+			<p style="margin-left: 185px; margin-top: 20px;">PE</p>
+		</div>
+		<div class="garden pa" style="width: 400px; height: 400px; left: 1100px;top: 200px; background-image: url(door.png); background-size: 100% 100%; ">
+			<p style="margin-left: 170px; margin-top: 20px;">Garden</p>
+		</div>
+		<img src="грамота.png" class="pa gramota transition" style="width: 250px; left: 600px;top: 200px; display: none;">
+		<img src="кубок.png" class="pa kubok transition" style="width: 450px; left: 600px; top: 200px;display: none;">
+		<img src="хатырык.jpg" class="pa medal transition" style="width: 250px; left: 600px; top: 200px;display: none;">
+	</div>
+	<div class="winner" style="display: none; background-image: url(winner.jpg);"></div>
+
+	<div class="location1" style="display: none">
+		
+		<img src="pam2.png" class="daniel">
+		<img src="pam1.png" class="playerLoc1">
+		<div class="sms pt-4 pb-4 pl-5 pr-5"></div>
+		<div class="danielSpeak pt-2 pb-1 pl-2 pr-1"></div>
+		<div class="translate pt-3 pl-2"></div>
+		<div class="variant col-12">
+			<div class="border-bottom v1  pt-5 pb-1 pl-5"></div>
+			<div class=" v2 pb-1 pl-5"></div>
+		</div>
+	</div>
+	<div class="location2 monospace" style="display: none">
+		<h1 class="text-danger text-center start"></h1>
+		<div class="sportsmen" style="background-image: url(pam1.png);top: 40px; width: 110px;">
+			<p>Егор</p>			
+		</div>
+		<div class="sportsmen" style="background-image: url(pam2.png);top: 170px; width: 90px;">
+			<p>Дэниел</p>
+		</div>
+		<div class="sportsmen player2" style="background-image: url(pam1.png);top: 300px; width: 110px;">
+			<p>Игрок</p>
+		</div>
+		<div class="sportsmen" style="background-image: url(pam1.png);top: 430px; width: 110px;">
+			<p>Давид</p>
+		</div>
+		<div class="sportsmen" style="background-image: url(pam2.png);top: 560px; width: 90px;">
+			<p>Эдвард</p>
+		</div>
+		
+
+		<div class="finish"style="background-color: red; height: 700px; width: 10px;position: absolute; top: 0px; left: 1300px;"></div>
+		<button class="btn btn-success btn2" style="left: 1350px; top: 600px; position: absolute;">Нажимай</button>
+	</div>
+	<div class="location3" style="display: none">
+		<div class="level1" style="display: none">
+			<h1 class="zadanie31 text-center">Найди якутские вещи</h1>
+			<h1 class="text-center">Время: <span class="time">10</span></h1>
+			<div style="width: 450px; margin-right: auto; margin-left: auto; margin-top: 100px;">
+				<div class="d-flex">
+					<div class="border box" style="height: 150px; width: 150px; background-color: green;"></div>
+					<div class="border box" style="height: 150px; width: 150px; background-color: green;"></div>
+					<div class="border box" style="height: 150px; width: 150px; background-color: green;"></div>
+				</div>
+				<div class="d-flex">
+					<div class=" border box" style="height: 150px; width: 150px;background-color: green;"></div>
+					<div class=" border box" style="height: 150px; width: 150px;background-color: green;"></div>
+					<div class=" border box" style="height: 150px; width: 150px;background-color: green;"></div>
+				</div>
+				<div class="d-flex">
+					<div class=" border box" style="height: 150px; width: 150px;background-color: green;"></div>
+					<div class=" border box" style="height: 150px; width: 150px;background-color: green;"></div>
+					<div class=" border box" style="height: 150px; width: 150px;background-color: green;"></div>
+				</div>
+			</div>			
+		</div>
+		<div class="level2" style="display: none">
+			<h1 class="text-center">Преврати иностранца в якута</h1>
+			<h1 class="text-center">Время: <span class="time2">10</span></h1>
+			<img src="pam2.png" class="pa pam transition" style="width: 300px; left: 600px; top: 100px">
+			<img src="samuray.png" class="pa hat2 transition clothes" style="width: 120px; left: 350px; top: 100px">
+			<img src="sakhahat.png" class="pa hat1 transition clothes" style=" width: 100px; left: 1050px;">
+
+			<img src="pants.png" class="pa pants2 transition clothes" style="width: 120px; left: 300px; top: 450px">
+			<img src="fstaan.png" class="pa pants1 transition clothes" style=" width: 230px; left: 1000px; top: 400px">
+		
+			<img src="verkh.png" class="pa coat1 transition clothes" style="width: 230px; left: 300px;top: 200px">			
+			<img src="russian.png" class="pa coat2 transition clothes" style="width: 178px; left: 1000px;top: 250px">
+
+			<img src="atakh.png" class="pa shoes1 transition clothes" style="width: 240px; left: 500px; top: 450px">
+			<img src="shoes1.png" class="pa shoes2 transition clothes" style="width: 80px; left: 850px; top: 600px">
+			<img src="shoes2.png" class="pa shoes2 transition clothes" style="width: 80px; left: 940px; top: 600px">
+
+			<img src="aa.png" class="pa aa transition clothes" style="width: 200px; left: 150px; top: 300px">
+			<div class="pa transition pt-4 pb-5 pl-4 pr-3 sakhatalk" style="background-image: url(talk.png);background-size: 100% 100%;left: 810px; top: 80px; width: 100px; display: none;">
+				Уруй-Айхал!!!
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		let score = 0
+		let winner = document.querySelector('.winner')
+		let body = document.querySelector('.body')
+		let mainButton = document.querySelector('.mainButton')
+		let main = document.querySelector('.main')
+		let english = document.querySelector('.english')
+		let pe = document.querySelector('.pe')
+		let garden = document.querySelector('.garden')
+		let location1 = document.querySelector('.location1')
+		let location2 = document.querySelector('.location2')
+		let location3 = document.querySelector('.location3')
+		let level1 = document.querySelector('.level1')
+		let level2 = document.querySelector('.level2')
+		let gramota = document.querySelector('.gramota')
+		let kubok = document.querySelector('.kubok')
+		let medal = document.querySelector('.medal')
+
+		mainButton.onclick = function(){
+			main.style.display = 'block'
+			mainButton.style.display = 'none'
+			body.style.backgroundImage = "url(main.jpg)"
+			alert("Стань лучшим и выиграй поездку в Англию! Удачи!!!")
+		}
+// 1 LOCATION	
+		teacherMessage = ["Помоги ученикам понять, что говорит Дэниел.", "Молодец! Ты отлично знаешь английский!","Попробуй заново", "ты плохо знаешь английский. Выйди из класса!"]
+		danielMessage = ["Hello! My name is Daniel. I'm 17 and I'm from London.", "I enjoy playing football and also I like playing the guitar."]
+		translationVariant = ["Привет! Меня зовут Дэниел. Мне 17 и я из Лондона.","Привет! Я Давид, мне 71, я живу в Лондоне.","Мне нравится играть в футбол, а также играть на гитаре.","Мне нравится играть в футбол, но я не умею играть на гитаре."]
+		let sms = document.querySelector('.sms')
+		let danielSpeak = document.querySelector('.danielSpeak')
+		let variant = document.querySelector('.variant')
+		let translate = document.querySelector('.translate')
+		let v1 = document.querySelector('.v1')
+		let v2 = document.querySelector('.v2')
+
+		english.onclick = function(){
+			main.style.display = 'none'
+			location1.style.display = 'block'
+			body.style.backgroundImage = "url(classroom1.jpg)"
+
+			let showMessage = function(){
+			sms.style.display = 'block'
+			sms.innerHTML = teacherMessage[0]
+			}
+			setTimeout(showMessage,1000)
+
+			let showDanielSpeak = function(){
+				sms.style.display = 'none'
+				danielSpeak.style.display = 'block'
+				danielSpeak.innerHTML = danielMessage[0]
+			}
+			setTimeout(showDanielSpeak,3000)
+
+			let translation = function(){
+				alert("Выбери правильный перевод.")
+				variant.style.display = 'block'
+				v1.innerHTML = translationVariant[0]
+				v2.innerHTML = translationVariant[1]
+			}
+			setTimeout(translation,4000)
+
+			v1.onclick = function(){
+				variant.style.display = 'none'
+				translate.style.display = 'block'
+				translate.innerHTML = translationVariant[0]
+				let showMessage2 = function(){				
+					sms.style.display = 'block'
+					sms.innerHTML = teacherMessage[1]
+					danielSpeak.style.display = 'none'
+					translate.style.display = 'none'
+				}
+				setTimeout(showMessage2,1000)
+
+				let finish = function(){
+					main.style.display = 'block'
+					location1.style.display = 'none'
+					body.style.backgroundImage = "url(main.jpg)"
+					gramota.style.display = 'block'
+					let gogramota = function(){
+						gramota.style.left = '200px'
+						gramota.style.top = '100px'
+						gramota.style.width = '100px'
+						score = score + 1
+						if(score==3){
+							winner.style.display = 'block'
+						}
+					}
+					setTimeout(gogramota,1000)
+				}
+				setTimeout(finish,3000)
+				
+			}
+			v2.onclick = function(){
+				variant.style.display = 'none'
+				translate.style.display = 'block'
+				translate.innerHTML = translationVariant[1]
+				let showMessage = function(){
+					sms.style.display = 'block'
+					sms.innerHTML = teacherMessage[2]
+					danielSpeak.style.display = 'none'
+					translate.style.display = 'none'
+				}
+				setTimeout(showMessage,1000)
+				let chance2 = function(){
+					sms.style.display = 'none'
+					translate.style.display = 'none'
+					danielSpeak.style.display = 'block'
+					danielSpeak.innerHTML = danielMessage[1]
+					variant.style.display = 'block'
+					v1.innerHTML = translationVariant[2]
+					v2.innerHTML = translationVariant[3]
+
+					v1.onclick = function(){
+						variant.style.display = 'none'
+						translate.style.display = 'block'
+						translate.innerHTML = translationVariant[2]
+						let showMessage2 = function(){
+							danielSpeak.style.display = 'none'
+							variant.style.display = 'none'
+							translate.style.display = 'none'				
+							sms.style.display = 'block'
+							sms.innerHTML = teacherMessage[1]
+						}
+						setTimeout(showMessage2,1000)
+
+						let finish = function(){
+							main.style.display = 'block'
+							location1.style.display = 'none'
+							body.style.backgroundImage = "url(main.jpg)"
+							gramota.style.display = 'block'
+							let gogramota = function(){
+								gramota.style.left = '200px'
+								gramota.style.top = '100px'
+								gramota.style.width = '100px'
+								score = score + 1
+								if(score==3){
+									winner.style.display = 'block'
+								}
+							}
+							setTimeout(gogramota,1000)
+						}
+						setTimeout(finish,3000)						
+					}
+					v2.onclick = function(){
+						variant.style.display = 'none'
+						translate.style.display = 'block'
+						translate.innerHTML = translationVariant[3]
+						let showMessage2 = function(){				
+							sms.style.display = 'block'
+							sms.innerHTML = teacherMessage[3]
+							translate.style.display = 'none'
+							danielSpeak.style.display = 'none'
+						}
+						setTimeout(showMessage2,2000)
+
+						let finish = function(){
+							main.style.display = 'block'
+							location1.style.display = 'none'
+							body.style.backgroundImage = "url(main.jpg)"
+							score = score + 1
+							if(score==3){
+								winner.style.display = 'block'
+							}
+						}
+						setTimeout(finish,4000)						
+					}
+
+				}
+				setTimeout(chance2,3000)
+
+				
+			}
+
+		}
+// 2 LOCATION	
+		start = document.querySelector('.start')
+		btn2 = document.querySelector('.btn2')
+		player2 = document.querySelector('.player2')
+		sportsmen = document.querySelectorAll('.sportsmen')
+
+		pe.onclick = function(){
+			main.style.display = 'none'
+			location2.style.display = 'block'
+			body.style.backgroundImage = "url(pe.jpg)"
+
+
+			alert2 = function(){
+				alert("кликай на кнопку, чтобы бегать")
+
+				second = ["на старт", "внимание","МАРШ!"]
+				x = 0
+				start.innerHTML = second[0]
+				prepare = function(){
+					x = x + 1
+					start.innerHTML = second[x]
+					if(x>=2){
+						clearInterval(stop)
+						r = 20
+						btn2.onclick = function(){
+							
+
+							let random = function(){
+								let rand = Math.random()*100
+								rand = Math.round(rand)
+								r = r + rand
+								return r;
+							}	
+							sportsmen[2].style.left = random() + "px"
+							
+								
+								let w = random()
+								
+								
+								if(w>1300){
+									start.innerHTML = "ты победил!"
+									btn2.style.display = 'none'
+									let finish = function(){
+										main.style.display = 'block'
+										location2.style.display = 'none'
+										body.style.backgroundImage = "url(main.jpg)"
+										kubok.style.display = 'block'
+										let gokubok = function(){
+											kubok.style.left = '150px'
+											kubok.style.top = '300px'
+											kubok.style.width = '200px'
+											score = score + 1
+											if(score==3){
+												winner.style.display = 'block'
+											}
+										}
+										setTimeout(gokubok,1000)
+									}
+									setTimeout(finish,1000)
+								}
+							
+							
+							
+						}
+						let random = function(){
+							let rand = Math.random()*50
+							rand = Math.round(rand)
+							r = r + rand
+							return r;
+						}
+
+						
+						let run0 = function(){							
+							sportsmen[0].style.left = random() + "px"
+							w = random()
+							for(s=0;s<5;s=s+1){
+								if(w>1300){
+									clearInterval(finish)
+								}
+							}	
+						}
+						let finish = setInterval(run0,900)
+
+						let run1 = function(){							
+							sportsmen[1].style.left = random() + "px"
+							w = random()
+							for(s=0;s<5;s=s+1){
+								if(w>1300){
+									clearInterval(finish1)
+								}
+							}	
+						}
+						let finish1 = setInterval(run1,1000)
+
+						let run3 = function(){							
+							sportsmen[3].style.left = random() + "px"
+							w = random()
+							for(s=0;s<5;s=s+1){
+								if(w>1300){
+									clearInterval(finish3)
+								}
+							}	
+						}
+						let finish3 = setInterval(run3,800)
+
+						let run4 = function(){							
+							sportsmen[4].style.left = random() + "px"
+							w = random()
+							for(s=0;s<5;s=s+1){
+								if(w>1300){
+									clearInterval(finish4)
+								}
+							}	
+						}
+						let finish4 = setInterval(run4,800)
+					}
+				}
+				let stop = setInterval(prepare,1000)
+			}
+			setTimeout(alert2,1000)			
+		}
+// 3 LOCATION
+		images = ['yellow', 'red']
+		box = document.querySelectorAll('.box')
+		let time = document.querySelector('.time')
+		let second = 2
+		// level 2
+		let clothes = document.querySelectorAll('.clothes')
+		let pam = document.querySelector('.pam')
+		let hat1 = document.querySelector('.hat1')
+		let hat2 = document.querySelector('.hat2')
+		let coat1 = document.querySelector('.coat1')
+		let coat2 = document.querySelector('.coat2')
+		let pants1 = document.querySelector('.pants1')
+		let pants2 = document.querySelector('.pants2')
+		let shoes1 = document.querySelector('.shoes1')
+		let shoes2 = document.querySelectorAll('.shoes2')
+		let aa = document.querySelector('.aa')
+		let sakhatalk = document.querySelector('.sakhatalk')
+		let time2 = document.querySelector('.time2')
+
+// level 1
+		garden.onclick = function(){
+			body.style.backgroundImage = "url(bgsakha1.jpg)"
+			main.style.display = 'none'
+			location3.style.display = 'block'
+			level2.style.display = 'block'
+
+			// let stopwatch = function(){
+			// 	second = second - 1
+			// 	time.innerHTML = second
+			// 	if(second==0){
+			// 		clearInterval(stop)
+			// 		alert('Ты проиграл!')
+			// 		level2.style.display = 'block'
+			// 		level1.style.display = 'none'
+			// 	}
+			// }
+			// let stop = setInterval(stopwatch,1000)
+
+// level 2
+			let t = 10
+			let vremya = function(){
+				t = t - 1
+				time2.innerHTML = t
+				if(t==0){
+					clearInterval(stop2)
+					alert('Ты проиграл!')
+					level2.style.display = 'none'
+					main.style.display = 'block'
+					body.style.backgroundImage = "url(main.jpg)"
+				}
+			}
+			let stop2 = setInterval(vremya,1000)
+			let score1 = 0
+			hat2.onclick = function(){
+				hat2.style.left = "680px"
+				hat2.style.top = "90px"
+				let check = function(){
+					alert("Не подходит")
+					hat2.style.left = "350px"
+					hat2.style.top = "100px"
+				}
+				setTimeout(check,1000)
+			}
+			hat1.onclick = function(){
+				hat1.style.left = "690px"
+				hat1.style.top = "60px"
+				score1 = score1 + 1
+				if(score1==5){
+					clearInterval(stop2)
+					pam.src = "pam.png"
+					pam.style.width = "400px"
+					for(c=0;c<10;c=c+1){
+						clothes[c].style.display = "none"
+						sakhatalk.style.display = "block"
+						let check = function(){
+							level2.style.display = 'none'
+							main.style.display = 'block'
+							body.style.backgroundImage = "url(main.jpg)"
+							medal.style.display = 'block'
+							let gomedal = function(){
+								medal.style.left = '200px'
+								medal.style.top = '500px'
+								medal.style.width = '100px'
+								score = score + 1
+								if(score==3){
+									winner.style.display = 'block'
+								}
+							}
+							setTimeout(gomedal,1000)
+						}
+						setTimeout(check,2000)
+					}
+				}
+			}
+			coat1.onclick = function(){
+				coat1.style.left = "630px"
+				coat1.style.top = "168px"
+				score1 = score1 + 1
+				if(score1==5){
+					clearInterval(stop2)
+					pam.src = "pam.png"
+					pam.style.width = "400px"
+					for(c=0;c<10;c=c+1){
+						clothes[c].style.display = "none"
+						sakhatalk.style.display = "block"
+						let check = function(){
+							level2.style.display = 'none'
+							main.style.display = 'block'
+							body.style.backgroundImage = "url(main.jpg)"
+							medal.style.display = 'block'
+							let gomedal = function(){
+								medal.style.left = '200px'
+								medal.style.top = '500px'
+								medal.style.width = '100px'
+								score = score + 1
+								if(score==3){
+									winner.style.display = 'block'
+								}
+							}
+							setTimeout(gomedal,1000)
+						}
+						setTimeout(check,2000)
+					}
+				}
+			}
+			coat2.onclick = function(){
+				coat2.style.left = "652px"
+				coat2.style.top = "200px"
+				let check = function(){
+					alert("Не подходит")
+					coat2.style.left = "1000px"
+					coat2.style.top = "250px"
+				}
+				setTimeout(check,1000)
+			}
+			pants1.onclick = function(){
+				pants1.style.left = "632px"
+				pants1.style.top = "250px"
+				score1 = score1 + 1
+				if(score1==5){
+					clearInterval(stop2)
+					pam.src = "pam.png"
+					pam.style.width = "400px"
+					for(c=0;c<10;c=c+1){
+						clothes[c].style.display = "none"
+						sakhatalk.style.display = "block"
+						let check = function(){
+							level2.style.display = 'none'
+							main.style.display = 'block'
+							body.style.backgroundImage = "url(main.jpg)"
+							medal.style.display = 'block'
+							let gomedal = function(){
+								medal.style.left = '200px'
+								medal.style.top = '500px'
+								medal.style.width = '100px'
+								score = score + 1
+								if(score==3){
+									winner.style.display = 'block'
+								}
+							}
+							setTimeout(gomedal,1000)
+						}
+						setTimeout(check,2000)
+					}
+				}
+			}
+			pants2.onclick = function(){
+				pants2.style.left = "682px"
+				pants2.style.top = "260px"
+				let check = function(){
+					alert("Не подходит")
+					pants2.style.left = "300px"
+					pants2.style.top = "450px"
+				}
+				setTimeout(check,1000)
+			}
+			shoes1.onclick = function(){
+				shoes1.style.left = "622px"
+				shoes1.style.top = "332px"
+				score1 = score1 + 1
+				if(score1==5){
+					clearInterval(stop2)
+					pam.src = "pam.png"
+					pam.style.width = "400px"
+					for(c=0;c<10;c=c+1){
+						clothes[c].style.display = "none"
+						sakhatalk.style.display = "block"
+						let check = function(){
+							level2.style.display = 'none'
+							main.style.display = 'block'
+							body.style.backgroundImage = "url(main.jpg)"
+							medal.style.display = 'block'
+							let gomedal = function(){
+								medal.style.left = '200px'
+								medal.style.top = '500px'
+								medal.style.width = '100px'
+								score = score + 1
+								if(score==3){
+									winner.style.display = 'block'
+								}
+							}
+							setTimeout(gomedal,1000)
+						}
+						setTimeout(check,2000)
+					}
+				}
+			}
+			shoes2[0].onclick = function(){
+				shoes2[0].style.left = "645px"
+				shoes2[0].style.top = "472px"
+				let check = function(){
+					alert("Не подходит")
+					shoes2[0].style.left = "850px"
+					shoes2[0].style.top = "600px"
+				}
+				setTimeout(check,1000)
+			}
+			shoes2[1].onclick = function(){
+				shoes2[1].style.left = "760px"
+				shoes2[1].style.top = "472px"
+				let check = function(){
+					alert("Не подходит")
+					shoes2[1].style.left = "940px"
+					shoes2[1].style.top = "600px"
+				}
+				setTimeout(check,1000)
+			}
+			aa.onclick = function(){
+				aa.style.left = "690px"
+				aa.style.top = "282px"
+				score1 = score1 + 1
+				if(score1==5){
+					clearInterval(stop2)
+					pam.src = "pam.png"
+					pam.style.width = "400px"
+					for(c=0;c<10;c=c+1){
+						clothes[c].style.display = "none"
+						sakhatalk.style.display = "block"
+						let check = function(){
+							level2.style.display = 'none'
+							main.style.display = 'block'
+							body.style.backgroundImage = "url(main.jpg)"
+							medal.style.display = 'block'
+							let gomedal = function(){
+								medal.style.left = '200px'
+								medal.style.top = '500px'
+								medal.style.width = '100px'
+								score = score + 1
+								if(score==3){
+									winner.style.display = 'block'
+								}
+							}
+							setTimeout(gomedal,1000)
+						}
+						setTimeout(check,2000)
+					}
+				}
+			}
+
+		}
+	</script>
+</body>
+</html>
